@@ -1,0 +1,11 @@
+const  findLongestCommonPrefix=(list_str)=> {
+  if (list_str.length === 0) return "";
+  let prefix = list_str.shift()
+for (const iterator of list_str) {
+      while (iterator.indexOf(prefix) !== 0) {
+          prefix = prefix.substring(0, prefix.length - 1);
+          if (prefix === "") return "";
+      }
+    }
+  return prefix;
+}
